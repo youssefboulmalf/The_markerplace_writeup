@@ -66,7 +66,7 @@ We can use the browser dev kit or a cookie extention to add the cookie to our br
 
 ![alt text](img/cookie.png?raw=true "cookie")
 
-There's the first flag
+*There's the first flag*
 
 ## 2nd flag
 
@@ -121,7 +121,7 @@ Succes!
 
 ![alt text](img/ssh.png?raw=true "ssh")
 
-There's the second flag
+*There's the second flag*
 
 
 ## 3rd flag
@@ -228,7 +228,7 @@ this means we can use the following command to escelate our privlages.
 
 ![alt text](img/flag3.png?raw=true "flag3")
 
-And that is flag 3!
+*And that is flag 3!*
 
 That was my writeup for 'the marketplace' room on THM.
 Thanks for reading, Suggestions & Feedback are appreciated !
