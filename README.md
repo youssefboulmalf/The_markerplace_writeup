@@ -12,7 +12,7 @@ If we check the nmap results we can see the ports 22,80 and 32768 are open.
 
 There is a webserver running on port 80. If we visit the website we are greeted with what seems to be a simple marketplace.
 
-![alt text](img/web.png?raw=true "nmapresult")
+![alt text](img/web.png?raw=true "web")
 
 
 We will run a quik dir scan to see if it can find some important directories
@@ -20,7 +20,7 @@ We will run a quik dir scan to see if it can find some important directories
 ```gobuster dir -u http://10.10.81.210:80 -w /usr/share/dirb/wordlists/big.txt > dirbuster.txt```
 the output will be saved in 'dirbuster.txt'
 
-![alt text](img/web.png?raw=true "nmapresult")
+![alt text](img/dir.png?raw=true "dir")
 
 we can see a directory named admin, but if we try to acces it we can see the message:
 "You are not authorized to view this page!"
