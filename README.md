@@ -38,7 +38,7 @@ we could find a xss bug in the listing we might be able to grab some admin sessi
 
 ## 1st flag
 
-If we create a new listing we can some xss on the description text box
+If we create a new listing we can try some xss on the description text box.
 
 ```<p style="color:red;">cross</p>```
 
@@ -64,7 +64,9 @@ Succes! If we check our simple http server we can see that the request made cont
 
 We can use the browser dev kit or a cookie extention to add the cookie to our browser. Now we can try to visit the admin page.
 
-![alt text](img/cookie.png?raw=true "cookie")
+![alt text](img/add.png?raw=true "add")
+
+![alt text](img/admin.png?raw=true "admin")
 
 *There's the first flag*
 
@@ -78,7 +80,7 @@ Checking the messages of the admin user does not yield any results. If we click 
 
 If we try some path traversal symbols as user query parameter we get an intresting error message.
 
-![alt text](img/cookie.png?raw=true "cookie")
+![alt text](img/error.png?raw=true "error")
 
 Now that we no its a SQL query we can try some SQLi query's
 
