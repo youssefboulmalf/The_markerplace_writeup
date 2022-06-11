@@ -6,7 +6,7 @@
 First of all we are gonna start with some reconnaissance on the box. We will start with a nmap scan.
 
 ```nmap -sV -sC -T4 -oN ./nmap_results 10.10.197.179```
-the output will be saved in './nmap_results'
+the output will be saved in './nmap_results'.
 
 If we check the nmap results we can see the ports 22,80 and 32768 are open.
 
@@ -27,7 +27,7 @@ the output will be saved in 'dirbuster.txt'
 we can see a directory named admin, but if we try to acces it we can see the message:
 "You are not authorized to view this page!"
 
-We probably need to be loged in as an admin to see this page
+We probably need to be logged in as an admin to see this page.
 
 If we create an account we can see that we can create a listing.
 
